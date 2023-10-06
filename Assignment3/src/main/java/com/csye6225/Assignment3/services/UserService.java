@@ -28,7 +28,9 @@ public class UserService {
     public void loadDataFromCsv() {
         System.out.println("Current Working Directory: " + System.getProperty("user.dir"));
 
+
         try (CSVReader csvReader = new CSVReader(new FileReader(System.getProperty("user.dir") + "/Assignment3/src/main/resources/static/opt/users.csv"))) {
+
 
             String[] line;
             csvReader.readNext();
@@ -56,9 +58,12 @@ public class UserService {
         } catch (IOException e) {
             e.printStackTrace();
         } catch (CsvValidationException e) {
+
             {
                 throw new RuntimeException(e);
             }
         }
     }
+
 }
+
