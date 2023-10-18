@@ -43,7 +43,7 @@ jobs:
 
       - name: Installing packer provisioners
         working-directory: Assignment3/packer
-        run: packer init packer.pkr.hcl
+
 
       - name: Formatting packer
         working-directory: packer
