@@ -1,5 +1,4 @@
 name: Main Push Workflow
-
 on:
   push:
     branches:
@@ -52,4 +51,5 @@ jobs:
       - name: Running Packer template validation
         working-directory: Assignment3/packer
         run: packer build -color=false -on-error=abort packer.pkr.hcl
+
 
