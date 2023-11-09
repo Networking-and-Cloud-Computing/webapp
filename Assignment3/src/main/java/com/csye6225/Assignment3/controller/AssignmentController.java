@@ -44,7 +44,6 @@ public class AssignmentController {
         String method = HttpMethod.GET.toString();
         client.increment("api.calls." + method + path);
        try{
-
            jdbcTemplate.queryForObject("SELECT 9", Integer.class);
                 logger.info("Database Connected");
                 return ResponseEntity.status(HttpStatus.OK)
