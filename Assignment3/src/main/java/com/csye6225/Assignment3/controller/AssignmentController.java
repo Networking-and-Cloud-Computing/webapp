@@ -145,7 +145,6 @@ public class AssignmentController {
 //            return  new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
 //        }
 
-        logger.Info("Deleted Assignment in Database");
         return assignmentService.deleteAssignment(id) ?
                 ResponseEntity.status(204).build() : ResponseEntity.status(404).build();
     }
